@@ -46,26 +46,7 @@ rv-unity-plus/
 └── assets/
 ```
 
-## Design decisions worth mentioning
 
-- **Theme tokens instead of inline colors/spacing.** `theme.js` centralizes
-  the palette (deep indigo `#4B2E83` + gold `#F4B93E` accent), spacing scale,
-  corner radius, and shadow so every component looks consistent without
-  copy-pasted style values.
-- **`Card.js` as a shared base.** Both highlight cards wrap this instead of
-  duplicating shadow/radius/padding — the actual "reusable card style" the
-  brief asks for.
-- **Grid via Flexbox, not a library.** `ActionGrid` uses
-  `flexWrap: 'wrap'` + `justifyContent: 'space-between'` with tiles sized at
-  `31%` width so 3 fit per row and wrapping happens automatically.
-- **Bookmark toggle** uses the functional updater form of `useState`
-  (`setSaved(prev => !prev)`) so it never reads a stale value of `saved`.
-
-## One thing I learned
-
-<!-- TODO: fill this in yourself after you've actually built/run it —
-     e.g. something about Flexbox, StyleSheet, or useState that clicked
-     while working on this. This is meant to be genuine. -->
 
 ## Stretch goals attempted
 
